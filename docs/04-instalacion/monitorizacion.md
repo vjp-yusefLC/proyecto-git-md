@@ -16,3 +16,17 @@ wget -O - https://deb.goaccess.io/gnugpg.key | sudo apt-key add -
 echo "deb http://deb.goaccess.io/ $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/goaccess.list
 sudo apt-get update
 sudo apt-get install goaccess
+```
+
+## 3. Estado de los Servicios (Systemd)
+Es fundamental verificar que los servicios principales de la arquitectura LAMP estén activos.
+
+### Comandos de comprobación
+```bash
+sudo systemctl status apache2
+sudo systemctl status mysql
+sudo systemctl status php*-fpm
+```
+
+## 4. Monitoreo de Recursos con htop
+Se utiliza **htop** para una visualización interactiva de los procesos que consumen más recursos en el servidor. Permite identificar cuellos de botella de forma rápida.
