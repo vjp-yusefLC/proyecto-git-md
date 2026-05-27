@@ -7,7 +7,7 @@ Para garantizar la compatibilidad y seguridad del sistema, se han definido las s
 
 | Componente | Versión | Descripción |
 | :--- | :--- | :--- |
-| **Apache** | 2.4.57 | Servidor web (versión actualizada) |
+| **Apache** | 2.4.60 | Servidor web (versión actualizada) |
 | **MySQL** | 8.0 | Sistema de gestión de bases de datos |
 | **PHP** | 8.1+ | Lenguaje de programación de servidor |
 | **Certbot** | 2.9 | Herramienta para SSL/TLS automático |
