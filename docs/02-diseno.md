@@ -7,7 +7,7 @@ Para garantizar la compatibilidad y seguridad del sistema, se han definido las s
 
 | Componente | Versión | Descripción |
 | :--- | :--- | :--- |
-| **Apache** | 2.4.59 | Servidor web (versión actualizada) |
+| **Apache** | 2.4.61 | Servidor web (versión actualizada) |
 | **MySQL** | 8.0 | Sistema de gestión de bases de datos |
 | **PHP** | 8.1+ | Lenguaje de programación de servidor |
 | **Java** | JDK 21 | Lenguaje de programación de servidor |
