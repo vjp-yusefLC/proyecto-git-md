@@ -25,6 +25,8 @@ Este documento registra las revisiones del proyecto, el estado de cada sección 
     - Se ha completado la sección de operaciones con procedimientos de mantenimiento preventivo.
     - Se ha diseñado el Plan de Recuperación ante Desastres (DRP) con protocolos técnicos de restauración.
     - Actualización de enlaces transversales entre documentos de instalación y operación.
+    - Integración de diagrama de arquitectura y tabla de componentes en el diseño.
+    - Refactorización del diagrama de Gantt para mejorar la legibilidad y cronología.
 - **Resultado:** Aprobado para pruebas de concepto.
 
 ---
