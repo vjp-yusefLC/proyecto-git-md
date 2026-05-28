@@ -51,9 +51,11 @@ El cortafuegos se gestionará mediante la herramienta `ufw` (Uncomplicated Firew
     ```
 3.  **Activación:** `ufw enable`.
 
-## Reglas UFW
-- Permitir SSH solo desde IP de la oficina: `ufw allow from 192.168.1.0/24 to any port 22`
-- Permitir tráfico web: `ufw allow 80/tcp` y `ufw allow 443/tcp`
+## Configuración de firewall con UFW
+- `ufw default deny incoming`
+- `ufw allow 22/tcp`   # SSH para administración
+- `ufw allow 80,443/tcp`  # Web
+- `ufw enable`
 
 ## Integración y Dependencias
 
@@ -64,4 +66,6 @@ El cortafuegos se gestionará mediante la herramienta `ufw` (Uncomplicated Firew
 ## Documentación de Referencia
 *   [Análisis Inicial de Requisitos](../01-analisis.md)
 *   [Especificaciones de Diseño](../02-diseno.md)
-*   [Guía de Recuperación ante Desastres](../06-recuperacion.md)
+*   [Guía de Recuperación ante Desastres](../06-recuperacion.md)# Seguridad: SSH y Firewall (UFW)
+
+Este documento detalla la configuración de acceso seguro y el filtrado de tráfico para la infraestructura de la PYME, garantizando la integridad de los servicios web y de bases de datos.
