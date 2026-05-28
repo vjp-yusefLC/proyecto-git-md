@@ -19,7 +19,7 @@ Este documento registra las revisiones del proyecto, el estado de cada sección 
 
 ## 2. Registro de Revisiones
 
-### Revisión v1.1.0 (2026-05-28)
+### Revisión v1.0.0 (2026-05-28)
 - **Responsable:** vjp-yuseflc (Documentalista de operaciones)
 - **Cambios realizados:**
     - Se ha completado la sección de operaciones con procedimientos de mantenimiento preventivo.
@@ -34,7 +34,7 @@ Este documento registra las revisiones del proyecto, el estado de cada sección 
     - Revisión de errores críticos (502 Bad Gateway).
 - **Resultado:** Aprobado para despliegue en producción.
 
-### Revisión v1.2.0 (2026-05-28)
+### Revisión v1.0.0 (2026-05-28)
 - **Responsable:** vjp-yuseflc
 - **Cambios realizados:** Versión inicial completa con LAMP, Monitorización y DRP.
 
@@ -46,4 +46,6 @@ Este documento registra las revisiones del proyecto, el estado de cada sección 
 | :---: | :---: | :--- | :--- |
 | **0.1.0** | 2026-05-20 | yuseflc | Estructura inicial |
 | **1.0.0** | 2026-05-28 | vjp-yuseflc | Operación y recuperación completa |
-| **1.1.0** | 2026-05-28 | yuseflc | **Versión Actual:** Balanceador y Alta Disponibilidad |
+| **1.0.0** | 2026-05-28 | yuseflc | **Versión Actual:** Balanceador y Alta Disponibilidad |
+| **1.0.0** | 2026-05-28 | vjp-yuseflc | Revision general |
+
