@@ -51,6 +51,10 @@ El cortafuegos se gestionará mediante la herramienta `ufw` (Uncomplicated Firew
     ```
 3.  **Activación:** `ufw enable`.
 
+## Reglas UFW
+- Permitir SSH solo desde IP de la oficina: `ufw allow from 192.168.1.0/24 to any port 22`
+- Permitir tráfico web: `ufw allow 80/tcp` y `ufw allow 443/tcp`
+
 ## Integración y Dependencias
 
 *   **Base de Datos:** El motor de [Base de Datos](base-de-datos.md) queda protegido tras el firewall. Las conexiones solo son permitidas desde el localhost (127.0.0.1) o la red interna de confianza.
