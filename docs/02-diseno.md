@@ -24,7 +24,30 @@ La infraestructura se organiza para proteger los datos de la PYME mediante el fi
 | **HTTPS** | 443 | TCP | Tráfico web cifrado (SSL/TLS) |
 
 ## 3. Arquitectura del Sistema
-1.  **Capa de Aplicación:** El servidor **Apache** procesa las peticiones externas. Los archivos de configuración se gestionan en `/etc/apache2/`.
-2.  **Capa de Datos:** **MySQL** aloja las bases de datos para la web corporativa y la gestión interna.
-3.  **Seguridad:** Se implementan reglas de "denegación por defecto" en el firewall, permitiendo solo los puertos de la tabla anterior.
-Notas sobre los cambios realizados:
+
+La infraestructura sigue un modelo de capas con segmentación de servicios y monitorización integrada.
+
+```mermaid
+graph TD
+    User([Usuario Externo]) -- HTTPS:443 --> FW[Firewall UFW]
+    FW -- Proxy --> Web[Servidor Apache]
+    subgraph Servidor LAMP
+        Web -- FastCGI --> PHP[PHP-FPM 8.1]
+        Web -- Localhost --> Netdata[Netdata Monitor]
+        PHP -- Query --> DB[(MySQL 8.0)]
+        System[Logs & Archivos] -- Analiza --> GA[GoAccess]
+    end
+    DB -- Backup --> Storage[(Almacenamiento Local/Remoto)]
+```
+
+### 3.1. Tabla de Componentes y Funcionalidad
+
+| Componente | Rol en el Sistema | Configuración Principal |
+| :--- | :--- | :--- |
+| **Ubuntu Server** | Sistema Operativo Base | Kernel optimizado para red |
+| **Apache 2.4** | Servidor Web / Proxy Inverso | `/etc/apache2/sites-available/` |
+| **MySQL 8.0** | Almacenamiento Persistente | `/etc/mysql/mysql.conf.d/` |
+| **PHP-FPM 8.1** | Intérprete de Scripts | `/etc/php/8.1/fpm/` |
+| **Netdata** | Monitorización en Tiempo Real | Puerto 19999 (Local) |
+| **GoAccess** | Análisis de Tráfico y Seguridad | `/var/log/apache2/access.log` |
+| **UFW** | Seguridad Perimetral | Denegación por defecto |
